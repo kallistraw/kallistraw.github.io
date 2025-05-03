@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kallistra | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#a78bfa",
+              secondary: "#fbcfe8",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-500"
+  >
+    <!-- Toggle Button -->
+    <div class="absolute top-5 right-5">
+      <button
+        onclick="toggleDarkMode()"
+        id="modeToggle"
+        class="w-10 h-10 relative overflow-hidden"
+      >
+        <img
+          id="lightIcon"
+          src="images/light/toggle.png"
+          alt="Light mode"
+          class="absolute top-0 left-0 w-full h-full transition-opacity duration-300"
+        />
+        <img
+          id="darkIcon"
+          src="images/dark/toggle.png"
+          alt="Dark mode"
+          class="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300"
+        />
+      </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex flex-col justify-center items-center text-center px-6"
+      id="hero"
+    >
+      <h1 id="title" class="text-5xl md:text-6xl font-bold mb-4">
+        Hello, I'm <span class="text-primary">Kallistra</span>
+      </h1>
+      <p id="subtitle" class="text-xl md:text-2xl">A creative explorer in code & sound</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 px-6 max-w-3xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+      <p>
+        I'm a multi-faceted creator with a love for music, design, and technology. From crafting
+        bass drops to animating web dreams, I strive to make every project a vibe.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-16 px-6 max-w-5xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-8">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-secondary bg-opacity-20 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold">Project One</h3>
+          <p>A cool project that blends sound and motion.</p>
+        </div>
+        <div class="bg-secondary bg-opacity-20 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold">Project Two</h3>
+          <p>A visual storytelling piece with interactive elements.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-6 max-w-xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
+      <form action="https://formspree.io/f/your-id" method="POST" class="flex flex-col gap-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          class="p-3 rounded-lg border"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          class="p-3 rounded-lg border"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          class="p-3 rounded-lg border"
+          required
+        ></textarea>
+        <button type="submit" class="bg-primary text-white px-4 py-2 rounded-lg">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm">Made with anime.js & tailwindCSS by Kallistra</footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
