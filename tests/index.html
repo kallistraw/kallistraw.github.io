@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Modal Buttons</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .nav-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+
+      .nav-btn {
+        background: transparent;
+        border: 1px solid black;
+        border-radius: 2px;
+        color: white;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+
+      .nav-btn:hover {
+        background: white;
+        color: black;
+      }
+
+      .nav-btn:not(:last-child) {
+        border-bottom: none;
+      }
+
+      @media (min-width: 1200px) {
+        .nav-buttons {
+          flex-direction: row;
+        }
+
+        .nav-btn:not(:last-child) {
+          border-right: none;
+          border-bottom: 1px solid white;
+        }
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100 m-0">
+    <main class="flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="nav-buttons">
+        <button class="nav-btn" data-bs-toggle="modal" data-bs-target="#modalIntro">Intro</button>
+        <button class="nav-btn" data-bs-toggle="modal" data-bs-target="#modalWork">Work</button>
+        <button class="nav-btn" data-bs-toggle="modal" data-bs-target="#modalAbout">About</button>
+        <button class="nav-btn" data-bs-toggle="modal" data-bs-target="#modalContact">
+          Contact
+        </button>
+      </div>
+    </main>
+
+    <!-- Sticky Footer -->
+    <footer class="text-center sticky-bottom w-100 mb-3 text-muted">
+      Made with sarcasm and semicolons. © 2025
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal fade" id="modalIntro" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-body-secondary">
+          <div class="modal-header">
+            <h5 class="modal-title">Intro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">Here comes the intro like a soft breeze of Bootstrap!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalWork" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-body-secondary">
+          <div class="modal-header">
+            <h5 class="modal-title">Work</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">All work and no play makes this modal a dull box.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalAbout" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-body-secondary">
+          <div class="modal-header">
+            <h5 class="modal-title">About</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">This modal tells you more than you asked for. Be warned.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalContact" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-body-secondary">
+          <div class="modal-header">
+            <h5 class="modal-title">Contact</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">You rang? Let’s chat, digitally of course.</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
